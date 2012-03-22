@@ -13,8 +13,11 @@
 
 	<?php do_action( 'bp_before_directory_members_page' ); ?>
 
-	<div id="content">
-		<div class="padder">
+	<div id="content" class="clearfix row-fluid">
+
+		<div id="main" class="span8 clearfix" role="main">
+		
+			<div class="padder">
 
 		<?php do_action( 'bp_before_directory_members' ); ?>
 
@@ -87,9 +90,13 @@
 		<?php do_action( 'bp_after_directory_members' ); ?>
 
 		</div><!-- .padder -->
+
+		</div> <!-- end #main -->
+	
+		<?php get_sidebar( 'buddypress' ); ?>
+
 	</div><!-- #content -->
 
 	<?php do_action( 'bp_after_directory_members_page' ); ?>
 
-<?php get_sidebar( 'buddypress' ); ?>
 <?php get_footer( 'buddypress' ); ?>

@@ -11,8 +11,11 @@
 
 <?php get_header( 'buddypress' ); ?>
 
-	<div id="content">
-		<div class="padder">
+	<div id="content" class="clearfix row-fluid">
+	
+		<div id="main" class="span8 clearfix" role="main">
+		
+			<div class="padder">
 
 		<form action="<?php bp_group_creation_form_action(); ?>" method="post" id="create-group-form" class="standard-form" enctype="multipart/form-data">
 			<h3><?php _e( 'Create a Group', 'buddypress' ); ?> &nbsp;<a class="button" href="<?php echo trailingslashit( bp_get_root_domain() . '/' . bp_get_groups_root_slug() ); ?>"><?php _e( 'Groups Directory', 'buddypress' ); ?></a></h3>
@@ -312,7 +315,11 @@
 		</form>
 
 		</div><!-- .padder -->
+		
+		</div> <!-- end #main -->
+	
+		<?php get_sidebar( 'buddypress' ); ?>
+
 	</div><!-- #content -->
 
-<?php get_sidebar( 'buddypress' ); ?>
 <?php get_footer( 'buddypress' ); ?>

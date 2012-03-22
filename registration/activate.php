@@ -1,7 +1,10 @@
 <?php get_header( 'buddypress' ); ?>
 
-	<div id="content">
-		<div class="padder">
+	<div id="content" class="clearfix row-fluid">
+
+		<div id="main" class="span8 clearfix" role="main">
+		
+			<div class="padder">
 
 		<?php do_action( 'bp_before_activation_page' ) ?>
 
@@ -47,8 +50,11 @@
 		<?php do_action( 'bp_after_activation_page' ) ?>
 
 		</div><!-- .padder -->
-	</div><!-- #content -->
 
-	<?php get_sidebar( 'buddypress' ) ?>
+		</div> <!-- end #main -->
+	
+		<?php get_sidebar( 'buddypress' ); ?>
+
+	</div><!-- #content -->
 
 <?php get_footer( 'buddypress' ); ?>
