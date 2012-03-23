@@ -124,11 +124,11 @@ function bp_tpack_enqueue_styles() {
 	}
 
 	// Add the wireframe BP page styles
-	wp_enqueue_style( 'bp', plugins_url( '/bp-template-pack/' ) . $stylesheet, array(), $version );
+	wp_enqueue_style( 'bp', get_stylesheet_directory_uri() . '/css/' . $stylesheet, array(), $version );
 
 	// Enqueue RTL styles for BP 1.5+
 	if ( version_compare( BP_VERSION, '1.3', '>' ) && is_rtl() )
-		wp_enqueue_style( 'bp-rtl',  plugins_url( '/bp-template-pack/' ) . 'bp-rtl.css', array( 'bp' ), $version );
+		wp_enqueue_style( 'bp-rtl',  get_stylesheet_directory_uri() . '/css/bp-rtl.css', array( 'bp' ), $version );
 }
 add_action( 'wp_enqueue_scripts', 'bp_tpack_enqueue_styles' );
 
